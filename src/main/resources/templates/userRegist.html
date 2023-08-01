@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ユーザー登録画面</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+<script type="text/javascript" th:src="@{/webjars/jquery/3.6.4/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/userRegist.js}"></script>
+</head>
+<body>
+<div class="container">
+	<h2>ユーザー登録画面</h2>
+	<form>
+		<div class="row mt-5">
+			<div class="col-auto">
+				<label for="userId">ユーザーID</label>
+			</div>
+			<div class="col-auto">
+				<input type="text" class="form-control" id="userId" name="userId">
+			</div>
+		</div>
+		<div class="row mt-2 mb-2">
+			<div class="col-auto">
+				<label for="userName">ユーザー名</label>
+			</div>
+			<div class="col-auto">
+				<input type="text" class="form-control" id="userName" name="userName">
+			</div>
+			<span class="text-danger" id="errorMsg"></span>
+		</div>
+		<input type="button" class="btn btn-primary" id="registBtn" value="登録">
+	</form>
+	
+	<div class="mt-3">
+		==登録結果=====================
+	</div>
+	<div id="userList"></div>
+</div>
+</body>
+</html>
